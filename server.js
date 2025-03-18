@@ -18,7 +18,7 @@ app.use(
         secret: 'tu_secreto_seguro', // Cambia esto por una cadena secreta segura
         resave: false,
         saveUninitialized: true,
-        cookie: { secure: true }, // Cambia a true si usas HTTPS
+        cookie: { secure: false }, // Cambia a true si usas HTTPS
     })
 );
 
@@ -32,7 +32,8 @@ app.get('/api/generar-captcha', (req, res) => {
 // Endpoint para consultar el estado
 app.post('/api/consultar', (req, res) => {
     const { dni, captchaInput } = req.body;
-
+    console.log(captchaInput);
+    console.log(req.session.captcha)
     // Validar CAPTCHA
     if (!req.session.captcha || captchaInput != req.session.captcha) {
         return res.status(400).json({ error: 'CAPTCHA incorrecto' });
