@@ -1,0 +1,149 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* Espaciado para dispositivos móviles */
+}
+
+/* Contenedor principal */
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Ancho máximo para pantallas grandes */
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Estilos para inputs y botones */
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+/* Input focus */
+input:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+/* Botón */
+button {
+    background-color: #0095da;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 100%; /* Mismo ancho que los inputs */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Mensaje */
+.message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #444;
+    text-align: justify;
+}
+
+/* Estilos para el resultado */
+.resultado {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.resultado p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.resultado strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para el nombre */
+.nombre {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0095da;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el estado APTO */
+.estado-apto {
+    background-color: #28a745; /* Verde */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+/* Estilo para el estado NO APTO */
+.estado-no-apto {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+/* Estilo para el texto adicional */
+.texto-adicional {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+/* Media queries para diseño responsive */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px; /* Menos padding en dispositivos móviles */
+    }
+
+    input, button {
+        font-size: 14px; /* Tamaño de fuente más pequeño en móviles */
+    }
+
+    .nombre {
+        font-size: 16px; /* Tamaño de fuente más pequeño para el nombre */
+    }
+
+    .texto-adicional {
+        font-size: 13px; /* Tamaño de fuente más pequeño para el texto adicional */
+    }
+}
